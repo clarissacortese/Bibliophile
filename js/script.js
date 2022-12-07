@@ -15,9 +15,8 @@ search.onclick = async function () {
 }
 
 function renderWorks() {
-	// render tabella
 	risultati.innerHTML = "";
-	document.getElementById("instr").innerHTML = "You can click on the title of the book you are interested in if you want to read its description:";
+	document.getElementById("instructions").innerHTML = "You can click on the title of the book you are interested in if you want to read its description:";
 
 	for (const work of works) {
 		let row = document.createElement("tr");
