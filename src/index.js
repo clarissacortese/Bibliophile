@@ -1,3 +1,7 @@
+import "../css/style.css";
+import Books from '../imgs/books.png';
+import axios from "axios";
+
 let search = document.getElementById("search");
 let risultati = document.getElementById("risultati");
 let home = document.getElementById("home");

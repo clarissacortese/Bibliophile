@@ -25,6 +25,10 @@ h1 {
     box-shadow: 0 0 6px #00F1FF;
 }
 
+table {
+    text-align: left;
+}
+
 tr:hover {
     cursor: pointer;
 }
