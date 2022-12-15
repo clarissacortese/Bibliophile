@@ -3,11 +3,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     entry: {
-        index: "./src/js/index.js"
+        view: "./src/js/view.js",
+        service: "./src/js/service.js"
     },
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "bundle.js"
+        filename: "[name].bundle.js",
+        clean: true
     },
     module: {
         rules: [
@@ -43,7 +45,6 @@ module.exports = {
         })
     ],
     devServer: {
-        port: 5000,
         open: true,
         static: path.resolve(__dirname, "dist")
     },
