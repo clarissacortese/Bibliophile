@@ -1,3 +1,46 @@
 body {
-    color: red;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+h1 {
+    text-shadow: 3px 3px 3px #ababab;
+}
+
+#search {
+    background-color: #00A9B3;
+    color: whitesmoke;
+}
+
+#search:hover {
+    background-color: #FF6600;
+    color: whitesmoke;
+    box-shadow: 0 0 8px #FF6600;
+}
+
+#genre:focus {
+    box-shadow: 0 0 6px #00F1FF;
+}
+
+tr:hover {
+    cursor: pointer;
+}
+
+#loader {
+    margin: auto;
+    border: 8px solid #FFB541;
+    border-top: 10px solid #FF6600;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+  }
+
+.hide_spin {
+    display: none;
+}
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

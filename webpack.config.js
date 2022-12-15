@@ -16,6 +16,15 @@ module.exports = {
                 use: ["style-loader", "css-loader"]
             },
             {
+                test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+                use: {
+                    loader: "img-optimize-loader",
+                    options: {
+                        compress: {mode: "low"}
+                    }
+                }
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
