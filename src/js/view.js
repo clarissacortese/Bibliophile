@@ -1,7 +1,8 @@
 import "../css/style.css";
 import logoFn from "../img/logo/logo.js";
-import { fetchSubjects } from "./service";
-import { fetchDescription } from "./service";
+import { getSubjects } from "./service";
+import { getDescription } from "./service";
+import _ from "lodash";
 
 //logo con refresh
 
@@ -20,7 +21,7 @@ let works = [];
 
 search.onclick = async function () {
 	const genre = document.getElementById("genre").value;
-	works = await fetchSubjects(genre);
+	works = await getSubjects(genre);
 	renderWorks();
 }
 
@@ -39,8 +40,8 @@ function renderWorks() {
 		let a = document.createElement("td");
 		let tdDescr = document.createElement("td");
 		row.setAttribute("id", work.key)
-		t.innerHTML = work.title;
-		a.innerHTML = work.authors[0].name;
+		t.innerHTML = _.get(work, "title", "Sorry, we can't find the title.");
+		a.innerHTML = _.get(work, "authors[0].name", "Sorry, we can't find the author");
 		tdDescr.innerHTML = work.description ? work.description : "";
 		row.appendChild(t);
 		row.appendChild(a);
@@ -65,8 +66,8 @@ function addRowHandlers(currentRow) {
 		if (!work) {
 			return;
 		}
-		const descriptions = await fetchDescription(key);
-		let info = descriptions.description;
+		const descriptions = await getDescription(key);
+		let info = _.get(descriptions, "description", "Sorry, it seems that there is no description for this book.");
 		work.description = info;
 
 		refreshDescription(currentRow, info);
