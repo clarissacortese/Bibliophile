@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const getSubjects = async (genre) => {
-    document.getElementById("loader").classList.remove("hide_spin");
     let url = `https://openlibrary.org/subjects/${genre.toLowerCase()}.json`;
     try {
         const resp = await axios.get(url);

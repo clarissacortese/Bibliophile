@@ -20,6 +20,7 @@ let search = document.getElementById("search");
 let works = [];
 
 search.onclick = async function () {
+	document.getElementById("loader").classList.remove("hide_spin");
 	const genre = document.getElementById("genre").value;
 	works = await getSubjects(genre);
 	renderWorks();
