@@ -1,5 +1,7 @@
 # ProgettoJavaScriptAdvanced
 
+![cover](./src/imgs/final-result.png)
+
 The project shown here is a simple app, developed with HTML, CSS and JavaScript, and the use of Webpack and Bootstrap 5.2. It requires no installation, just access the link and can be used directly from the browser.
 
 The interface of the app consists of a search bar, through which one can search for a literary genre, obtaining a set of titles and their authors.

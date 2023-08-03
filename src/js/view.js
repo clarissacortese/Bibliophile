@@ -1,5 +1,5 @@
 import "../css/style.css";
-import logoFn from "../img/logo/logo.js";
+import logoFn from "../imgs/logo/logo.js";
 import { getSubjects } from "./service";
 import { getDescription } from "./service";
 import _ from "lodash";
