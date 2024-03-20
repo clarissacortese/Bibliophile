@@ -6,7 +6,12 @@ h1 {
     text-shadow: 3px 3px 3px #ababab;
 }
 
-#home:hover {
+#logo {
+    width: 72px;
+    height: 72px;
+}
+
+#logo:hover {
     cursor: pointer;
 }
 
@@ -23,6 +28,10 @@ h1 {
 
 #genre:focus {
     box-shadow: 0 0 6px #00F1FF;
+}
+
+#table{
+    display: none;
 }
 
 table {
@@ -51,4 +60,3 @@ tr:hover {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  
